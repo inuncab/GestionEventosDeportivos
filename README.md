@@ -1,6 +1,6 @@
-# GESTION EVENTOS DEPORTIVO
+# GESTION EVENTOS DEPORTIVOS
 
-## Ignacio Nuñez Cabezas
+## Ignacio Núñez Cabezas
 ## Victor Chacón Calle
 
 ### **Descripcion**
