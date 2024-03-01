@@ -1,3 +1,5 @@
+package GestionEventosDeportivos;
+
 public class Participante {
 
     // Atributos
@@ -23,7 +25,7 @@ public class Participante {
     // Usamos @Override para indicar que estamos sobreescribiendo el método toString() de la clase padre Object
     @Override
     public String toString() {
-        return "Participante: \n" +
+        return "GestionEventosDeportivos.Participante: \n" +
                 "   DNI: "+this.dni+"\n" +
                 "   Nombre: "+this.nombre+"\n"+
                 "   Apellidos: "+this.apellidos+"\n"+
