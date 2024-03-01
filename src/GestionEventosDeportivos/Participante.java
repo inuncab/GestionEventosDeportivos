@@ -3,10 +3,10 @@ package GestionEventosDeportivos;
 public class Participante {
 
     // Atributos
-    private String dni;
-    private String nombre;
-    private String apellidos;
-    private int edad;
+    protected String dni;
+    protected String nombre;
+    protected String apellidos;
+    protected int edad;
 
     // Métodos
     // Constructor que reciba todos los atributos e inicialice los valores
