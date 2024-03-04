@@ -1,6 +1,7 @@
 package GestionEventosDeportivos;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class Equipo implements Comparable {
 
@@ -65,17 +66,22 @@ public class Equipo implements Comparable {
                 "   Jugadores: "+this.jugadores;
     }
 
-    /*
-    Completar
 
-    public boolean equals() {
+    public boolean equals(Object obj) {
 
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null || getClass() != obj.getClass()) {
+            return false;
+        }
+        Equipo equipo = (Equipo) obj;
+        return Objects.equals(nombre, equipo.nombre);
     }
 
     public int compareTo(Equipo eq) {
-
+        return Integer.compare(this.puntos, eq.getPuntos());
     }
-    */
 
 
     // Getters y setters

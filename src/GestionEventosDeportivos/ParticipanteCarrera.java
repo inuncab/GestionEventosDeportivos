@@ -14,10 +14,16 @@ public class ParticipanteCarrera extends Participante {
 
     @Override
     public String toString() {
-        //String cadenaParticipante;
-        //cadenaParticipante = super.toString();
+
         return super.toString() +
                 "Tiempo: " + this.tiempo;
+
+        /*
+        Otra forma de hacerlo:
+
+        String cadenaParticipante;
+        cadenaParticipante = super.toString();
+         */
     }
 
     public double getTiempo() {
