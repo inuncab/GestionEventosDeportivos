@@ -7,10 +7,10 @@ public class TorneoDeFutbol extends EventoDeportivo {
 
     private ArrayList<Equipo> equipos;
 
-    public TorneoDeFutbol(String nombre, LocalDateTime fecha, String lugar, Equipo e) {
+    public TorneoDeFutbol(String nombre, LocalDateTime fecha, String lugar) {
         super(nombre, fecha, lugar);
 
-        //this.equipos = equipo;
+        this.equipos = new ArrayList<>();
     }
 
     @Override
@@ -35,5 +35,13 @@ public class TorneoDeFutbol extends EventoDeportivo {
 
     public boolean inscribirEquipo(Equipo equipo) {
         return this.equipos.add(equipo);
+    }
+
+    public ArrayList<Equipo> getEquipos() {
+        return equipos;
+    }
+
+    public void setEquipos(ArrayList<Equipo> equipos) {
+        this.equipos = equipos;
     }
 }

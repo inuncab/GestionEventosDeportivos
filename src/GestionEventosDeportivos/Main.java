@@ -4,6 +4,8 @@ import java.time.LocalDateTime;
 
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.Collections;
 
 public class Main {
     public static void main(String[] args) {
@@ -19,15 +21,15 @@ public class Main {
         carrera.inscribirParticipante(corredor2);
 
         // Instanciar un torneo de fútbol
-        TorneoDeFutbol torneo = new TorneoDeFutbol("Torneo de Fútbol", LocalDateTime.of(2024, 5, 1, 14, 0), "Estadio Principal", new Equipo("Equipo 1"));
+        TorneoDeFutbol torneo = new TorneoDeFutbol("Torneo de Fútbol", LocalDateTime.of(2024, 5, 1, 14, 0), "Estadio Principal");
 
         // Crear algunos equipos para el torneo
         Equipo equipo1 = new Equipo("Real madrid");
         Equipo equipo2 = new Equipo("Barcelona");
 
         // Inscribir los equipos en el torneo
-        torneo.inscribirParticipante(equipo1);
-        torneo.inscribirParticipante(equipo2);
+        torneo.inscribirEquipo(equipo1);
+        torneo.inscribirEquipo(equipo2);
 
         // Añadir jugadores al primer equipo
         Participante jugador1 = new Participante("78152113C", "Paco", "Perez", 25);
@@ -58,18 +60,15 @@ public class Main {
         System.out.println(equipo1);
 
         // Determinar y mostrar el ganador de cada evento
-        Participante ganadorCarrera = carrera.obtenerGanador();
+        ArrayList<Participante> ganadorCarrera = carrera.obtenerGanador();
         System.out.println("\nEl ganador de la carrera es: " + ganadorCarrera);
 
-        Participante ganadorTorneo = torneo.obtenerGanador();
+        ArrayList<Participante> ganadorTorneo = torneo.obtenerGanador();
         System.out.println("El ganador del torneo de fútbol es: " + ganadorTorneo);
 
         // Mostrar la lista de equipos de mayor puntuación a menor puntuación
-        System.out.println("\nLista de equipos del torneo de fútbol ordenados por puntuación:");
-        // Supongamos que tenemos un método para obtener la lista de equipos ordenados por puntuación
-        //ArrayList<Equipo> equiposOrdenados = torneo.obtenerEquiposOrdenadosPorPuntuacion();
-        //for (Equipo equipo : equiposOrdenados) {
-        //    System.out.println(equipo);
-        //
+        Collections.sort(torneo.getEquipos());
+        System.out.println("\nLista de equipos del torneo de fútbol ordenados por puntuación: "+ torneo.getEquipos());
+
     }
 }
