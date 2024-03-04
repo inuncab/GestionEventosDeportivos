@@ -4,7 +4,6 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 public abstract class EventoDeportivo implements Ganador {
-    private double distancia;
     private String nombre;
     private LocalDateTime fecha;
     private String lugar;
@@ -43,9 +42,10 @@ public abstract class EventoDeportivo implements Ganador {
         this.lugar = lugar;
     }
 
+
     // Método para inscribir participantes
-    public boolean inscribirParticipante(Participante par) {
-        return this.participantes.add(par);
+    public boolean inscribirParticipante(Participante participante) {
+        return this.participantes.add(participante);
     }
 
     // Método abstracto para obtener al ganador del evento
