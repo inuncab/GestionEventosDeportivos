@@ -32,4 +32,8 @@ public class TorneoDeFutbol extends EventoDeportivo {
 
         return participantesGanadores;
     }
+
+    public boolean inscribirEquipo(Equipo equipo) {
+        return this.equipos.add(equipo);
+    }
 }
