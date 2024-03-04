@@ -7,7 +7,7 @@ public abstract class EventoDeportivo implements Ganador {
     protected String nombre;
     protected LocalDateTime fecha;
     protected String lugar;
-    protected ArrayList<ParticipanteCarrera> participantes;
+    protected ArrayList<Participante> participantes;
 
     // Métodos
     // Constructor
@@ -19,7 +19,7 @@ public abstract class EventoDeportivo implements Ganador {
     }
 
     // Método para inscribir participantes
-    public boolean inscribirParticipante(ParticipanteCarrera participante) {
+    public boolean inscribirParticipante(Participante participante) {
         return this.participantes.add(participante);
     }
 
