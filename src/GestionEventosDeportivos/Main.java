@@ -70,6 +70,6 @@ public class Main {
         //ArrayList<Equipo> equiposOrdenados = torneo.obtenerEquiposOrdenadosPorPuntuacion();
         //for (Equipo equipo : equiposOrdenados) {
         //    System.out.println(equipo);
-        //}
+        //
     }
 }
