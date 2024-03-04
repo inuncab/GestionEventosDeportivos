@@ -51,6 +51,9 @@ public class Main {
         System.out.println("\nInformación del primer equipo:");
         System.out.println(equipo1);
 
+        System.out.println("\nInformación del segundo equipo:");
+        System.out.println(equipo2);
+
         // Eliminar un jugador del equipo
         boolean jugadorEliminado = equipo1.eliminarJugador(jugador1);
         System.out.println(jugadorEliminado ? "Jugador eliminado correctamente del equipo 1" : "El jugador no está en el equipo 1");

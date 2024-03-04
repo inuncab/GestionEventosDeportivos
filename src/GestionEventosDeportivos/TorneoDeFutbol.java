@@ -37,6 +37,11 @@ public class TorneoDeFutbol extends EventoDeportivo {
         return this.equipos.add(equipo);
     }
 
+    public String toString() {
+        return "Torneo: \n"+ super.toString();
+    }
+
+
     public ArrayList<Equipo> getEquipos() {
         return equipos;
     }

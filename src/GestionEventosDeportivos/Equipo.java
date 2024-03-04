@@ -60,7 +60,7 @@ public class Equipo implements Comparable {
     }
 
     public String toString() {
-        return "Participante: \n" +
+        return "Equipo: \n" +
                 "   Nombre: "+this.nombre+"\n" +
                 "   Puntos: "+this.puntos+"\n"+
                 "   Jugadores: "+this.jugadores;

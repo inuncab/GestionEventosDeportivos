@@ -26,6 +26,12 @@ public abstract class EventoDeportivo implements Ganador {
     // Método abstracto para obtener al ganador del evento
     public abstract ArrayList<Participante> obtenerGanador();
 
+    public String toString() {
+        return "   Nombre: "+this.nombre+"\n" +
+                "   Fecha: "+this.fecha+"\n"+
+                "   Lugar: "+this.lugar;
+    }
+
     // Getters y Setters
     public String getNombre() {
         return nombre;

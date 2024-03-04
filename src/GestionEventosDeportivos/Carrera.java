@@ -35,8 +35,6 @@ public class Carrera extends EventoDeportivo {
             }
 
 
-
-
         }
         ArrayList<Participante> ganadores = new ArrayList<>();
         if (participanteMin != null) {
@@ -44,5 +42,10 @@ public class Carrera extends EventoDeportivo {
         }
 
         return ganadores;
+    }
+
+    public String toString() {
+        return "Carrera: \n" + super.toString() +
+                "\n     Distancia: " + this.distancia;
     }
 }
