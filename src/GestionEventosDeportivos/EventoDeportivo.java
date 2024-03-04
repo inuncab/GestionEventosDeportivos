@@ -4,11 +4,12 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 public abstract class EventoDeportivo implements Ganador {
-    private String nombre;
-    private LocalDateTime fecha;
-    private String lugar;
-    private final ArrayList<Participante> participantes;
+    protected String nombre;
+    protected LocalDateTime fecha;
+    protected String lugar;
+    protected ArrayList<ParticipanteCarrera> participantes;
 
+    // Métodos
     // Constructor
     public EventoDeportivo(String nombre, LocalDateTime fecha, String lugar) {
         this.nombre = nombre;
@@ -16,6 +17,14 @@ public abstract class EventoDeportivo implements Ganador {
         this.lugar = lugar;
         this.participantes = new ArrayList<>();
     }
+
+    // Método para inscribir participantes
+    public boolean inscribirParticipante(ParticipanteCarrera participante) {
+        return this.participantes.add(participante);
+    }
+
+    // Método abstracto para obtener al ganador del evento
+    public abstract ArrayList<Participante> obtenerGanador();
 
     // Getters y Setters
     public String getNombre() {
@@ -42,13 +51,5 @@ public abstract class EventoDeportivo implements Ganador {
         this.lugar = lugar;
     }
 
-
-    // Método para inscribir participantes
-    public boolean inscribirParticipante(Participante participante) {
-        return this.participantes.add(participante);
-    }
-
-    // Método abstracto para obtener al ganador del evento
-    public abstract Participante obtenerGanador();
 }
 

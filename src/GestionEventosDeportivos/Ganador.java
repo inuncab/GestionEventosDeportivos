@@ -1,5 +1,7 @@
 package GestionEventosDeportivos;
 
+import java.util.ArrayList;
+
 public interface Ganador {
-    Participante obtenerGanador();
+    ArrayList<Participante> obtenerGanador();
 }

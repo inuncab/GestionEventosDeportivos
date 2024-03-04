@@ -14,7 +14,22 @@ public class TorneoDeFutbol extends EventoDeportivo {
     }
 
     @Override
-    public Participante obtenerGanador() {
-        return null;
+    public ArrayList<Participante> obtenerGanador() {
+        int puntajeMayor = Integer.MIN_VALUE;
+        ArrayList<Participante> participantesGanadores = new ArrayList<>();
+
+        for (int i = 0; i < equipos.size(); i++) {
+
+            Equipo equipo = equipos.get(i);
+
+            int puntosDeEquipo = equipo.getPuntos();
+            if (puntosDeEquipo > puntajeMayor) {
+                puntajeMayor = puntosDeEquipo;
+                participantesGanadores = equipo.getJugadores();
+            }
+
+        }
+
+        return participantesGanadores;
     }
 }
